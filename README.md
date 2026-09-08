@@ -102,7 +102,13 @@ python eureka_benchmark.py
 python eureka_benchmark.py --resume --device cuda
 python eureka_benchmark.py --datasets Actor Chameleon-F --classifiers gcn h2gcn
 python eureka_benchmark.py --smoke_test
+python eureka_benchmark.py --label_mask_ratio 0.0
 ```
+
+`--label_mask_ratio` controls how many training labels are visible to EUREKA while
+it trains the edge-utility scorer. The default, 1.0, exposes the full training set.
+Set it to 0.0 for the fully label-free, unsupervised setting, where no labels are
+used at all.
 
 Run the baselines:
 
